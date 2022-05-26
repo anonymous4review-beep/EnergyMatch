@@ -1,6 +1,6 @@
-# TorchSSL
+# EnergyMatch
 
-<img src="./figures/logo.png"  width = "100" height = "100" align='right' />
+The implementation is based on PyTorch open-source SSL repository TorchSSL. Please refer to the original repo for baselines: https://github.com/TorchSSL/TorchSSL
 
 All required packages can be installed with `environment.yml`
 
