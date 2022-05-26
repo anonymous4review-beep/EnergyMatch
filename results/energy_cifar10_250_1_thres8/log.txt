@@ -1,0 +1,19 @@
+[2022-05-10 02:07:27,679 WARNING] USE GPU: 0 for training
+[2022-05-10 02:07:27,704 INFO] Number of Trainable Params: 1469642
+[2022-05-10 02:07:29,202 INFO] model_arch: <models.energymatch.energymatch.EnergyMatch object at 0x7fb73c628390>
+[2022-05-10 02:07:29,203 INFO] Arguments: Namespace(T=0.5, alg='energymatch', amp=False, batch_size=64, bn_momentum=0.0010000000000000009, c='config/shilong/energymatch_cifar10_250_1.yaml', clip=0, cycle=7.0, da=False, data_dir='./data', dataset='cifar10', degree=10, depth=28, dist_backend='nccl', dist_url='tcp://127.0.0.1:10006', distributed=False, dropout=0.0, e_cutoff=-8.0, ema_m=0.999, epoch=1, eval_batch_size=1024, gpu=0, hard_label=True, imb_ratio_lb=100, imb_ratio_ulb=100, joint_conf=False, labeled_percentage=10, leaky_slope=0.1, load_path='None', long_tail=False, lr=0.03, momentum=0.9, multiprocessing_distributed=False, net='WideResNet', net_from_name=False, num_classes=10, num_eval_iter=5000, num_labels=250, num_train_iter=1048576, num_views=2, num_workers=1, optim='SGD', overwrite=True, p_cutoff=0.95, rank=0, resume=False, save_dir='./results', save_name='energy_cifar10_250_1_thres8', seed=1, temperature=1.0, train_sampler='RandomSampler', ulb_loss_ratio=1.0, uratio=7, use_tensorboard=True, weight_decay=0.0005, widen_factor=2, world_size=1, x1=0.5, x2=1.0, y1=-7.5, y2=-20)
+[2022-05-10 02:07:30,307 INFO] [!] data loader keys: dict_keys(['train_lb', 'train_ulb', 'eval'])
+[2022-05-10 02:07:32,024 INFO] model saved: ./results/energy_cifar10_250_1_thres8/latest_model.pth
+[2022-05-10 02:07:33,827 INFO] confusion matrix:
+[[0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]]
+[2022-05-10 02:07:33,831 INFO] 0 iteration, USE_EMA: True, {'train/sup_loss': tensor(2.4606, device='cuda:0'), 'train/unsup_loss': tensor(0., device='cuda:0'), 'train/total_loss': tensor(2.4606, device='cuda:0'), 'train/mask_ratio': tensor(1., device='cuda:0'), 'lr': 0.029999999999974228, 'train/prefecth_time': 0.4728421325683594, 'train/run_time': 1.2037987060546875, 'eval/loss': tensor(21.5034, device='cuda:0'), 'eval/top-1-acc': 0.1, 'eval/top-5-acc': 0.4884, 'eval/precision': 0.01, 'eval/recall': 0.1, 'eval/F1': 0.01818181818181818, 'eval/AUC': 0.5131012444444444}, BEST_EVAL_ACC: 0.1, at 0 iters
+[2022-05-10 02:07:33,868 INFO] model saved: ./results/energy_cifar10_250_1_thres8/model_best.pth

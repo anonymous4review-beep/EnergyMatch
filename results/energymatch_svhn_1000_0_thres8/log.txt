@@ -1,0 +1,29 @@
+[2022-05-10 02:18:36,267 WARNING] USE GPU: 0 for training
+[2022-05-10 02:18:36,291 INFO] Number of Trainable Params: 1469642
+[2022-05-10 02:18:37,791 INFO] model_arch: <models.energymatch.energymatch.EnergyMatch object at 0x7f7b8c6f0b10>
+[2022-05-10 02:18:37,791 INFO] Arguments: Namespace(T=0.5, alg='fixmatch', amp=False, batch_size=64, bn_momentum=0.0010000000000000009, c='config/shilong/energymatch_svhn_1000_0.yaml', clip=0, cycle=7.0, da=False, data_dir='./data', dataset='svhn', degree=10, depth=28, dist_backend='nccl', dist_url='tcp://127.0.0.1:10008', distributed=False, dropout=0.0, e_cutoff=-8.0, ema_m=0.999, epoch=1, eval_batch_size=1024, gpu=0, hard_label=True, imb_ratio_lb=100, imb_ratio_ulb=100, joint_conf=False, labeled_percentage=10, leaky_slope=0.1, load_path='None', long_tail=False, lr=0.03, momentum=0.9, multiprocessing_distributed=False, net='WideResNet', net_from_name=False, num_classes=10, num_eval_iter=5000, num_labels=1000, num_train_iter=1048576, num_views=2, num_workers=1, optim='SGD', overwrite=True, p_cutoff=0.95, rank=0, resume=False, save_dir='./results', save_name='energymatch_svhn_1000_0_thres8', seed=0, temperature=1.0, train_sampler='RandomSampler', ulb_loss_ratio=1.0, uratio=7, use_tensorboard=True, weight_decay=0.0005, widen_factor=2, world_size=1, x1=0.5, x2=1.0, y1=-7.5, y2=-20)
+[2022-05-10 02:18:53,780 INFO] [!] data loader keys: dict_keys(['train_lb', 'train_ulb', 'eval'])
+[2022-05-10 02:18:55,428 INFO] model saved: ./results/energymatch_svhn_1000_0_thres8/latest_model.pth
+[2022-05-10 02:18:59,496 INFO] confusion matrix:
+[[0.77752294 0.13302752 0.08944954 0.         0.         0.
+  0.         0.         0.         0.        ]
+ [0.72622083 0.2241616  0.04961757 0.         0.         0.
+  0.         0.         0.         0.        ]
+ [0.73632201 0.17932032 0.08435768 0.         0.         0.
+  0.         0.         0.         0.        ]
+ [0.7463567  0.17869535 0.07494795 0.         0.         0.
+  0.         0.         0.         0.        ]
+ [0.78913991 0.14625446 0.06460563 0.         0.         0.
+  0.         0.         0.         0.        ]
+ [0.73615772 0.15100671 0.11283557 0.         0.         0.
+  0.         0.         0.         0.        ]
+ [0.76884168 0.13859383 0.09256449 0.         0.         0.
+  0.         0.         0.         0.        ]
+ [0.71421496 0.21594849 0.06983655 0.         0.         0.
+  0.         0.         0.         0.        ]
+ [0.7626506  0.13915663 0.09819277 0.         0.         0.
+  0.         0.         0.         0.        ]
+ [0.78056426 0.12163009 0.09780564 0.         0.         0.
+  0.         0.         0.         0.        ]]
+[2022-05-10 02:18:59,502 INFO] 0 iteration, USE_EMA: True, {'train/sup_loss': tensor(2.3876, device='cuda:0'), 'train/unsup_loss': tensor(0., device='cuda:0'), 'train/total_loss': tensor(2.3876, device='cuda:0'), 'train/mask_ratio': tensor(1., device='cuda:0'), 'lr': 0.029999999999974228, 'train/prefecth_time': 0.461697998046875, 'train/run_time': 1.1384422607421876, 'eval/loss': tensor(16.3802, device='cuda:0'), 'eval/top-1-acc': 0.10944222495390289, 'eval/top-5-acc': 0.6097111247695144, 'eval/precision': 0.04944402119933914, 'eval/recall': 0.10860422126421694, 'eval/F1': 0.04788766704999591, 'eval/AUC': 0.5002273674221009}, BEST_EVAL_ACC: 0.10944222495390289, at 0 iters
+[2022-05-10 02:18:59,539 INFO] model saved: ./results/energymatch_svhn_1000_0_thres8/model_best.pth
